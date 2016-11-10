@@ -1,0 +1,62 @@
+<!DOCTYPE>
+<head>
+ <meta charset="utf-8">
+ 
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- Intégration du style du site CSS-->
+ <link rel="stylesheet" href="css/style.css">
+
+ <title>exo sur les formulaires : limiter le nombre de caractère</title>
+</head>
+ <script type="text/javascript">
+    <!--
+    function maxlength_textarea(id, crid, max)
+    {
+        var txtarea = document.getElementById(id);
+        document.getElementById(crid).innerHTML=max-txtarea.value.length;
+        txtarea.onkeypress=function(){eval('v_maxlength("'+id+'","'+crid+'",'+max+');')};
+        txtarea.onblur=function(){eval('v_maxlength("'+id+'","'+crid+'",'+max+');')};
+        txtarea.onkeyup=function(){eval('v_maxlength("'+id+'","'+crid+'",'+max+');')};
+        txtarea.onkeydown=function(){eval('v_maxlength("'+id+'","'+crid+'",'+max+');')};
+    }
+    function v_maxlength(id, crid, max)
+    {
+        var txtarea = document.getElementById(id);
+        var crreste = document.getElementById(crid);
+        var len = txtarea.value.length;
+        if(len>max)
+        {
+            txtarea.value=txtarea.value.substr(0,max);
+        }
+        len = txtarea.value.length;
+        crreste.innerHTML=max-len;
+    }
+-->
+</script>
+
+<body>
+
+    <p>
+      <label for="prenom">Prénom </label>
+      <br>
+      <br>
+      <input type="text" name="nom" id="nom" >
+  </p>
+
+  <p>
+    <label for="message">votre message: </label>
+    <br>
+    <br>
+    <textarea id="textarea_1" cols="35" rows="4"></textarea>
+</p>
+
+
+<br />
+Il vous reste <span id="carac_reste_textarea_1"></span> caractères.
+<script type="text/javascript">
+    <!--
+    maxlength_textarea('textarea_1','carac_reste_textarea_1',150);
+-->
+</script>
+</body>
+</html>

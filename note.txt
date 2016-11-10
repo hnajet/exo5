@@ -1,0 +1,13 @@
+var form = $('form');
+
+var date = form.serialize(); // serialize ça veut dire transformer en chaine de caractère.
+
+1-formulaire :
+-champ prénom
+-champ message limité à 140 caractères
+-bouton valider (disabled si aucun caractère)
+
+-traitement coté serveur :
+
+*cryptage du message (césar/vigenere)
+*chaine invers => textarea message
